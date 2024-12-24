@@ -3,7 +3,6 @@
     "target": "es2021",
     "module": "CommonJS",
     "declaration": true,
-    "skipLibCheck": true,
     "strict": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
