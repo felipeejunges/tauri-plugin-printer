@@ -1,7 +1,7 @@
 [package]
 name = "tauri-plugin-printer"
 version = "0.1.0"
-authors = [ "You" ]
+authors = [ "Alfian Lensun <alfianlensundev@gmail.com>", "adao99 https://github.com/adao99", "Pranav Poluri poluripranav@gmail.com"]
 description = ""
 edition = "2021"
 rust-version = "1.77.2"

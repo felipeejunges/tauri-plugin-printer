@@ -1,7 +1,17 @@
 {
   "name": "tauri-plugin-printer-api",
   "version": "0.1.0",
-  "author": "You",
+  "author": "alfianlensun <alfianlensundev@gmail.com>",
+  "contributors": [
+    {
+      "name": "Pranav Poluri",
+      "email": "poluripranav@gmail.com"
+    },
+    {
+      "name":"adao99",
+      "url": "https://github.com/adao99"
+    }
+  ],
   "description": "",
   "type": "module",
   "types": "./dist/index.d.ts",
