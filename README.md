@@ -21,7 +21,6 @@ npx @tauri-apps/cli plugin new printer
 Add allow clauses for **ALL** commands in ```permissions/default.toml```
 
 ```toml
-//default.toml
 [default]
 description = "Default permissions for the plugin"
 permissions = ["allow-create-temp-file", "allow-remove-temp-file", "allow-get-printers", "allow-get-printers-by-name", "allow-print-pdf", "allow-get-jobs", "allow-get-jobs-by-id", "allow-resume-job", "allow-restart-job", "allow-pause-job", "allow-remove-job"]
@@ -33,11 +32,8 @@ permissions = ["allow-create-temp-file", "allow-remove-temp-file", "allow-get-pr
 - If you are using the plugin locally, you have to add `printer:default` to your `capabilities/default.json` under permissions
 
     ``` json
-        //..default.json
     {
-        //..
         "permissions": [
-            //..other plugins
             "printer:default"
         ]
     }
