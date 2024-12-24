@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
     "target": "es2021",
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "CommonJS",
     "declaration": true,
     "skipLibCheck": true,
     "strict": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
-    "noEmit": true,
+    "outDir": "./dist"
   },
-  "include": ["guest-js/*.ts"],
-  "exclude": ["dist-js", "node_modules"]
+  "include": ["lib/*.ts"],
+  "exclude": ["dist", "node_modules"]
 }
