@@ -1,7 +1,8 @@
 {
   "name": "tauri-plugin-printer-api",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "alfianlensun <alfianlensundev@gmail.com>",
+  "readme": "README.md",
   "contributors": [
     {
       "name": "Pranav Poluri",
@@ -12,13 +13,11 @@
       "url": "https://github.com/adao99"
     }
   ],
-  "description": "",
-  "type": "module",
+  "description": "Tauri Plugin for printer access (Forked and Modified)",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "files": [
-    "dist",
-    "README.md"
+    "dist/**/*"
   ],
   "scripts": {
     "build": "tsc -b --force",
@@ -34,7 +33,6 @@
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.6",
     "@types/jsbarcode": "^3.11.4",
     "@types/qrcode": "^1.5.5",
     "jest": "^29.7.0",
