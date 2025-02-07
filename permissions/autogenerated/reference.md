@@ -52,6 +52,58 @@ Denies the create_temp_file command without any pre-configured scope.
 <tr>
 <td>
 
+`printer:allow-custom-get-printers-by-name`
+
+</td>
+<td>
+
+Enables the custom_get_printers_by_name command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`printer:deny-custom-get-printers-by-name`
+
+</td>
+<td>
+
+Denies the custom_get_printers_by_name command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`printer:allow-custom-print-pdf`
+
+</td>
+<td>
+
+Enables the custom_print_pdf command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`printer:deny-custom-print-pdf`
+
+</td>
+<td>
+
+Denies the custom_print_pdf command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
 `printer:allow-get-jobs`
 
 </td>
