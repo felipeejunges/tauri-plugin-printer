@@ -74,6 +74,9 @@ pub fn get_printers_by_name(printername: String) -> String {
  * Print pdf file 
  */
 pub fn print_pdf (options: PrintOptions) -> String {
+    println!("options id {}", options.id);
+    println!("options print_setting {}", options.print_setting);
+
     let dir: std::path::PathBuf = env::temp_dir();
     let print_setting: String = options.print_setting;
     let mut print: String = "-print-to-default".to_owned();
