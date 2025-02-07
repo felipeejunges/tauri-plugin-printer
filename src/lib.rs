@@ -74,7 +74,7 @@ fn get_printers() -> String {
 
 #[tauri::command(rename_all = "snake_case")]
 // this will be accessible with `invoke('plugin:printer|get_printer_by_name')`.
-pub fn get_printers_by_name(printername: String) -> String {
+fn get_printers_by_name(printername: String) -> String {
     if cfg!(windows) {
         return windows::get_printers_by_name(printername);
     }
@@ -84,7 +84,7 @@ pub fn get_printers_by_name(printername: String) -> String {
 
 #[tauri::command(rename_all = "snake_case")]
 // this will be accessible with `invoke('plugin:printer|print_pdf')`.
-pub fn print_pdf(
+fn print_pdf(
     id: String,
     path: String,
     printer_setting: String,
@@ -156,6 +156,36 @@ fn remove_job(printername: String, jobid: String) -> String {
     }
     return "Unsupported OS".to_string();
 }
+
+// PUBLICS FUNCTIONS
+
+pub fn custom_get_printers_by_name(printername: String) -> String {
+    if cfg!(windows) {
+        return windows::get_printers_by_name(printername);
+    }
+
+    return "Unsupported OS".to_string();
+}
+
+pub fn custom_print_pdf(
+    id: String,
+    path: String,
+    printer_setting: String,
+    remove_after_print: bool,
+) -> String {
+    if cfg!(windows) {
+        let options = declare::PrintOptions {
+            id,
+            path,
+            print_setting: printer_setting,
+            remove_after_print: remove_after_print,
+        };
+        return windows::print_pdf(options);
+    }
+
+    return "Unsupported OS".to_string();
+}
+
 
 /// Initializes the plugin.
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
