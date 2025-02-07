@@ -74,7 +74,7 @@ fn get_printers() -> String {
 
 #[tauri::command(rename_all = "snake_case")]
 // this will be accessible with `invoke('plugin:printer|get_printer_by_name')`.
-fn get_printers_by_name(printername: String) -> String {
+pub fn get_printers_by_name(printername: String) -> String {
     if cfg!(windows) {
         return windows::get_printers_by_name(printername);
     }
@@ -84,7 +84,7 @@ fn get_printers_by_name(printername: String) -> String {
 
 #[tauri::command(rename_all = "snake_case")]
 // this will be accessible with `invoke('plugin:printer|print_pdf')`.
-fn print_pdf(
+pub fn print_pdf(
     id: String,
     path: String,
     printer_setting: String,
